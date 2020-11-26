@@ -1,9 +1,13 @@
 # Data-Profiler
+
 Data Profiler
+
+<img style="width:100%;" src="images/data-profiler.png">
 
 Data discovery and profiling is the key feature to understand the data and its elements. Profiling exposes data quality issues. Data profiling on sample or complete data will allow data administrators to see following details:
 
 ## Technical data types
+
 Null or unsupported values
 Mean, average, min, max
 Sample values
@@ -16,6 +20,10 @@ Dashboard showing data element distributions, trends in automated profiling etc.
 ## InsightLake Metadata Store enables companies to obtain metadata from various data sources like databases, files, real time streams etc and store them for easy exploration and integration with other applications.
 Metadata Store defines metadata layer on various data entities.
 
+<img style="width:100%;" src="images/data-location.png">
+
+<img style="width:100%;" src="images/data-store.png">
+
 System - represents data sources like databases, file systems etc.
 Data Location - represents database, file systems, Kafka broker, SOLR hosts etc.
 Data Store - represents table, Kafka topic, file etc.
@@ -26,6 +34,11 @@ User - represents data user.
 Metadata Store captures technical, operational and business domain metadata and stores them at central location for easy exploration.
 
 ## Technical Metadata
+
+<img style="width:100%;" src="images/data-tab.png">
+
+<img style="width:100%;" src="images/profile-rules-tab.png">
+
 Table schema, File type, format, AVRO JSON schema, tags are some of the technical information elements about data assets which Metadata Store captures and stores. Data profiling feature allows extraction of known technical metadata like data field type, size, min and max values, sample values etc. It also extracts derived information like geo, currency, business domain types etc. All types of metadata gets stored in SOLR based central store to allow fast exploration and REST based integration with other enterprise applications.
 
 ## Tags & Properties
