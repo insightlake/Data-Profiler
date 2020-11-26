@@ -1,0 +1,64 @@
+version: "2.0"
+
+services:
+  datascience-backend-service:
+    build:
+      context: ../libs
+      dockerfile: ./datasciencebacked
+    ports:
+    - 9494:9494
+    links:
+    - elasticsearch:elasticsearch
+
+  datascience-ui-service:
+    build:
+      context: ../libs
+      dockerfile: ./datascienceui
+    ports:
+    - 8080:8080
+  db:
+    image: mysql:5.7
+    restart: always
+    hostname: mysql
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: 'edp_user'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '13306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    volumes:
+      - my-db:/var/lib/mysql
+    extra_hosts:
+      - "moby:127.0.0.1"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.4.0
+    container_name: elasticsearch
+    hostname: elasticsearch
+    ports:
+      - 9200:9200
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+# Names our volume
+volumes:
+  my-db:

@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.jfrog.jade.plugins</groupId>
+        <artifactId>jade-plugin-parent</artifactId>
+        <version>1.3.8</version>
+    </parent>
+
+    <groupId>org.jfrog.jade.plugins.common</groupId>
+    <artifactId>jade-plugin-common-parent</artifactId>
+
+    <packaging>pom</packaging>
+    <name>Jade Plugins Common Parent</name>
+    <description>Common modules with plexus components and Mojo superclasses</description>
+
+    <modules>
+        <module>jade-plugin-common</module>
+        <module>jade-group-common</module>
+        <module>jade-multijar-common</module>
+        <module>jade-development-common</module>
+    </modules>
+
+</project>
