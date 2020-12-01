@@ -66,6 +66,12 @@ You can show the data in analytical and graphical format by using charts
 <img style="width:100%;" src="images/audit.png">
 
 ## Data Classification 
+Data classification allows your users to assign a visual label to the data they create, so that informed decisions can be taken about how it is managed, protected and shared, both within and outside of your organisation. Classifier turns that visual label into metadata, which can be used to both enforce your company’s security policies and drive other technologies, such as data loss prevention, information rights management and archiving solutions.
+* Scale And Coverage For The Modern Enterprise
+* ML-Driven Classiﬁcation
+* Correlation Plus Classiﬁcation
+* Cataloging Plus Classification
+* Intelligent Labeling And Tagging
 
 ## Tags & Properties
 Any data element can be tagged for example a table or cell can be tagged as secure, which can then be used by security policy manager to automatically secure the access to the table or cell. Ingestion flow can be tokenized with tags, which can flow through end to end data pipeline for better lineage tracking. Other than tagging, properties (name, value) can be defined on data elements. For example on credit card column a property "Masking" with value "last 4" can be defined and used in business rules where ever data gets processed.
