@@ -1,7 +1,5 @@
 # Data-Profiler
 
-Data Profiler
-
 <img style="width:100%;" src="images/data-profiler.png">
 
 Data discovery and profiling is the key feature to understand the data and its elements. Profiling exposes data quality issues. Data profiling on sample or complete data will allow data administrators to see following details:
@@ -39,7 +37,35 @@ Metadata Store captures technical, operational and business domain metadata and 
 
 <img style="width:100%;" src="images/profile-rules-tab.png">
 
+<img style="width:100%;" src="images/data-profiler.png">
+
+<img style="width:100%;" src="images/data-profiler-tab.png">
+
 Table schema, File type, format, AVRO JSON schema, tags are some of the technical information elements about data assets which Metadata Store captures and stores. Data profiling feature allows extraction of known technical metadata like data field type, size, min and max values, sample values etc. It also extracts derived information like geo, currency, business domain types etc. All types of metadata gets stored in SOLR based central store to allow fast exploration and REST based integration with other enterprise applications.
+
+## Profiles
+
+<img style="width:100%;" src="images/profiles.png">
+
+You can use profiles to create and persist configuration information to use with Cloud Data Loss Prevention (DLP). Profiles are useful for decoupling configuration information such as what you inspect for and how you de-identify it from the implementation of your requests. Profiles provide a robust way to manage large scale rollouts of Cloud DLP capabilities.
+
+## Logical Types
+
+<img style="width:100%;" src="images/logical-types.png">
+
+ An logicalType is a type of sensitive data, such as a name, email address, telephone number, identification number, or credit card number.
+
+## Dashboard
+
+<img style="width:100%;" src="images/dashboard.png">
+
+You can show the data in analytical and graphical format by using charts
+
+## Audit
+
+<img style="width:100%;" src="images/audit.png">
+
+## Data Classification 
 
 ## Tags & Properties
 Any data element can be tagged for example a table or cell can be tagged as secure, which can then be used by security policy manager to automatically secure the access to the table or cell. Ingestion flow can be tokenized with tags, which can flow through end to end data pipeline for better lineage tracking. Other than tagging, properties (name, value) can be defined on data elements. For example on credit card column a property "Masking" with value "last 4" can be defined and used in business rules where ever data gets processed.
