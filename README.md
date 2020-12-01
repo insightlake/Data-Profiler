@@ -37,7 +37,7 @@ Metadata Store captures technical, operational and business domain metadata and 
 
 <img style="width:100%;" src="images/profile-rules-tab.png">
 
-<img style="width:100%;" src="images/data-profiler.png">
+<img style="width:100%;" src="images/data-profile-tab.png">
 
 <img style="width:100%;" src="images/data-profiler-tab.png">
 
