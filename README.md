@@ -6,32 +6,48 @@ Data discovery and profiling is the key feature to understand the data and its e
 
 <img style="width:100%;" src="images/profiler.png">
 
+Data profiling is the process of examining the data available from an existing information source (e.g. a database or a file) and collecting statistics or informative summaries about that data.The purpose of these statistics may be to:
+* Find out whether existing data can be easily used for other purposes.
+* Improve the ability to search data by tagging it with keywords, descriptions, or assigning it to a category.
+* Assess data quality, including whether the data conforms to particular standards or patterns.
+* Have an enterprise view of all data, for uses such as master data management, where key data is needed, or data governance for improving data quality.
+* Understanding data challenges early in any data intensive project, so that late project surprises are avoided. Finding data problems late in the project can lead to delays and cost overruns.
+
+Comprehensive discovery of sensitive data combined with identifier classification and file categorization remain fundamental information security objectives.
+With the emergence of both data privacy protection compliance mandates and growing consumer concerns, the challenge is compounded: enterprises now not only have to discover and classify sensitive data across complex data landscapes, but also account for whose data they are collecting and processing, and how.
+* Scale And Coverage For The Modern Enterprise
+* ML-Driven Classiﬁcation
+* Correlation Plus Classiﬁcation
+* Cataloging Plus Classification
+* Intelligent Labeling And Tagging
+
+
 ## Technical data types
 
-Null or unsupported values
-Mean, average, min, max
-Sample values
-Logical context types like currency, OS, geo information etc.
-Sensitive data discovery like SSN, Credit card, phone number, email etc.
-Results from profiling rules
-Relationships
-Dashboard showing data element distributions, trends in automated profiling etc.
+* Null or unsupported values
+* Mean, average, min, max
+* Sample values
+* Logical context types like currency, OS, geo information etc.
+* Sensitive data discovery like SSN, Credit card, phone number, email etc.
+* Results from profiling rules
+* Relationships
+* Dashboard showing data element distributions, trends in automated profiling etc.
 
-## InsightLake Metadata Store enables companies to obtain metadata from various data sources like databases, files, real time streams etc and store them for easy exploration and integration with other applications.
-Metadata Store defines metadata layer on various data entities.
+## Metadata Store
+InsightLake Metadata Store enables companies to obtain metadata from various data sources like databases, files, real time streams etc and store them for easy exploration and integration with other applications.Metadata Store defines metadata layer on various data entities.
 
 <img style="width:100%;" src="images/data-location.png">
 
 <img style="width:100%;" src="images/data-store.png">
 
-System - represents data sources like databases, file systems etc.
-Data Location - represents database, file systems, Kafka broker, SOLR hosts etc.
-Data Store - represents table, Kafka topic, file etc.
-Data Field - represents column, data element, field etc.
-Application - represents data application
-Domain - represents data's business domain'
-User - represents data user.
-Metadata Store captures technical, operational and business domain metadata and stores them at central location for easy exploration.
+* System - represents data sources like databases, file systems etc.
+* Data Location - represents database, file systems, Kafka broker, SOLR hosts etc.
+* Data Store - represents table, Kafka topic, file etc.
+* Data Field - represents column, data element, field etc.
+* Application - represents data application
+* Domain - represents data's business domain'
+* User - represents data user.
+* Metadata Store captures technical, operational and business domain metadata and stores them at central location for easy exploration.
 
 ## Technical Metadata
 
