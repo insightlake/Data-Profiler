@@ -4,6 +4,8 @@
 
 Data discovery and profiling is the key feature to understand the data and its elements. Profiling exposes data quality issues. Data profiling on sample or complete data will allow data administrators to see following details:
 
+<img style="width:100%;" src="images/profiler.png">
+
 ## Technical data types
 
 Null or unsupported values
