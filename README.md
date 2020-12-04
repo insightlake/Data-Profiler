@@ -10,13 +10,9 @@ Following are the main features:
 * Identifies personal and sensitive data
 * Performs data classification leveraging glossaries, catalog, technical metadata, business tags and actual data
 * Identifies data contexts and correlations to drive better accuracy
-* Find out whether existing data can be easily used for other purposes.
-* Improve the ability to search data by tagging it with keywords, descriptions, or assigning it to a category.
-* Classify critical data elements
+* Classifies critical data elements with enterprise defined governed classes
 * Provides adapters to enrich the existing data catalog
 * Handles structured, unstructured and semi structured data
-* Assess data quality, including whether the data conforms to particular standards or patterns.
-* Have an enterprise view of all data, for uses such as master data management, where key data is needed, or data governance for improving data quality.
 * Works on-premise or cloud environments across different data sources
 * Classifies files, relational databases, Object stores, No-SQL, realtime streams
 
@@ -86,6 +82,31 @@ Any data element can be tagged for example a table or cell can be tagged as secu
 Metadata Store enables companies to put business context over technical metadata to provide clear business terms on top of physical data. It also increases the productivity of the enterprise. Generated glossary helps cross functional alignment between various business groups and provides a common business vocabulary across organization.
 
 To learn more, check out [http://www.insightlake.com/data-profiler.html](http://www.insightlake.com/data-profiler.html)
+
+## Rules
+* Pre-defined rules to identify data elements
+* Pattern matching rules
+* Fuzzy matching rules
+* Custom scripted rules
+* ML driven rules
+
+## ML Classification
+ML based data classification/profiling is done using a set of hierarchical models. High level models perform context classification and route the data to appropriate ensemble models for further fine grained classification. 
+ML framework is flexible and plugs in off the shelf and custom models.
+
+Following models are used for classification
+* Context classifiers
+* Co-relational models
+* NLP models for text classification, topic modeling for emails, chat, documents
+* Image classifiers 
+* Audio classification & keywords models
+
+## UI
+* Allows exploration/search of the generated classifications
+* Allows correction of the classification, which could be reused to train models
+* Administration of rules, profiles and workflows
+* Allows exploration of audits
+
 
 Installation
 ------
