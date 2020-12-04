@@ -1,25 +1,24 @@
-# Data-Profiler
+# InsightLake Data Profiler & Classification
 
-<img style="width:100%;" src="images/data-profiler.png">
-
-Data discovery and profiling is the key feature to understand the data and its elements. Profiling exposes data quality issues. Data profiling on sample or complete data will allow data administrators to see following details:
+Companies are storing lots of data and having a clear visibility of this data at the enterprise level makes the business efficient, safe and complaint. Manual profiling/classification of the data is very costly and time consuming. 
+InsightLake solution enables the companies to perform the data classification using an intelligent, flexible and robust framework, which uses variety of data elemenets, glossaries, metadata coupled with business rules and ML models.
 
 <img style="width:100%;" src="images/profiler.png">
 
-Data profiling is the process of examining the data available from an existing information source (e.g. a database or a file) and collecting statistics or informative summaries about that data.The purpose of these statistics may be to:
+Following are the main features:
+* Profiles and classifies data using rules and ML models
+* Identifies personal and sensitive data
+* Performs data classification leveraging glossaries, catalog, technical metadata, business tags and actual data
+* Identifies data contexts and correlations to drive better accuracy
 * Find out whether existing data can be easily used for other purposes.
 * Improve the ability to search data by tagging it with keywords, descriptions, or assigning it to a category.
+* Classify critical data elements
+* Provides adapters to enrich the existing data catalog
+* Handles structured, unstructured and semi structured data
 * Assess data quality, including whether the data conforms to particular standards or patterns.
 * Have an enterprise view of all data, for uses such as master data management, where key data is needed, or data governance for improving data quality.
-* Understanding data challenges early in any data intensive project, so that late project surprises are avoided. Finding data problems late in the project can lead to delays and cost overruns.
-
-Comprehensive discovery of sensitive data combined with identifier classification and file categorization remain fundamental information security objectives.
-With the emergence of both data privacy protection compliance mandates and growing consumer concerns, the challenge is compounded: enterprises now not only have to discover and classify sensitive data across complex data landscapes, but also account for whose data they are collecting and processing, and how.
-* Scale And Coverage For The Modern Enterprise
-* ML-Driven Classiﬁcation
-* Correlation Plus Classiﬁcation
-* Cataloging Plus Classification
-* Intelligent Labeling And Tagging
+* Works on-premise or cloud environments across different data sources
+* Classifies files, relational databases, Object stores, No-SQL, realtime streams
 
 
 ## Technical data types
@@ -50,7 +49,6 @@ InsightLake Metadata Store enables companies to obtain metadata from various dat
 * Metadata Store captures technical, operational and business domain metadata and stores them at central location for easy exploration.
 
 ## Data Profiling
-Data profiling refers to the analysis of information for use in a data warehouse in order to clarify the structure, content, relationships, and derivation rules of the data. Profiling helps to not only understand anomalies and assess data quality, but also to discover, register, and assess enterprise metadata.The result of the analysis is used to determine the suitability of the candidate source systems, usually giving the basis for an early go/no-go decision, and also to identify problems for later solution design.
 
 <img style="width:100%;" src="images/data-tab.png">
 
@@ -60,37 +58,26 @@ Data profiling refers to the analysis of information for use in a data warehouse
 
 <img style="width:100%;" src="images/data-profiler-tab.png">
 
-Table schema, File type, format, AVRO JSON schema, tags are some of the technical information elements about data assets which Metadata Store captures and stores. Data profiling feature allows extraction of known technical metadata like data field type, size, min and max values, sample values etc. It also extracts derived information like geo, currency, business domain types etc. All types of metadata gets stored in SOLR based central store to allow fast exploration and REST based integration with other enterprise applications.
+Table schema, File type, format, AVRO JSON schema, tags are some of the technical information elements about data assets which Metadata Store captures and stores. Data profiling feature allows extraction of known technical metadata like data field type, size, min and max values, sample values etc. It also extracts derived information like geo, currency, business domain types etc. All types of metadata gets stored in Lucene based central store to allow fast exploration and REST based integration with other enterprise applications.
 
 ## Profiles
 
 <img style="width:100%;" src="images/profiles.png">
 
-You can use profiles to create and persist configuration information to use with Cloud Data Loss Prevention (DLP). Profiles are useful for decoupling configuration information such as what you inspect for and how you de-identify it from the implementation of your requests. Profiles provide a robust way to manage large scale rollouts of Cloud DLP capabilities.
-
 ## Logical Types
-
+Solution already captures different logical types, which can be easily customized and new types can be created.
 <img style="width:100%;" src="images/logical-types.png">
 
- An logicalType is a type of sensitive data, such as a name, email address, telephone number, identification number, or credit card number.
-
 ## Dashboard
+Proofiling & Classification dashboard provides great insights about the performance of the classification pipelines
 
 <img style="width:100%;" src="images/dashboard.png">
 
-You can show the data in analytical and graphical format by using charts
-
 ## Audit
+Profiler tracks the changes to the metadata, generated classifications, scores, tags etc. using various audit events.
 
 <img style="width:100%;" src="images/audit.png">
 
-## Data Classification 
-Data classification allows your users to assign a visual label to the data they create, so that informed decisions can be taken about how it is managed, protected and shared, both within and outside of your organisation. Classifier turns that visual label into metadata, which can be used to both enforce your company’s security policies and drive other technologies, such as data loss prevention, information rights management and archiving solutions.
-* Scale And Coverage For The Modern Enterprise
-* ML-Driven Classiﬁcation
-* Correlation Plus Classiﬁcation
-* Cataloging Plus Classification
-* Intelligent Labeling And Tagging
 
 ## Tags & Properties
 Any data element can be tagged for example a table or cell can be tagged as secure, which can then be used by security policy manager to automatically secure the access to the table or cell. Ingestion flow can be tokenized with tags, which can flow through end to end data pipeline for better lineage tracking. Other than tagging, properties (name, value) can be defined on data elements. For example on credit card column a property "Masking" with value "last 4" can be defined and used in business rules where ever data gets processed.
