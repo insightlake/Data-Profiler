@@ -1,53 +1,92 @@
 # InsightLake Data Profiler & Classification
 
-Companies are storing lots of data and having a clear visibility of this data at the enterprise level makes the business efficient, safe and complaint. Manual profiling/classification of the data is very costly and time consuming. 
-InsightLake solution enables the companies to perform the data classification using an intelligent, flexible and robust framework, which uses variety of data elemenets, glossaries, metadata coupled with business rules and ML models.
+Companies are storing lots of data and having a clear visibility of this data at the enterprise level makes the business efficient, safe and compliant. 
 
-<img style="width:100%;" src="images/profiler.png">
+Team should be able to clearly identify the classification of the data, following are the important categories:
+* Identify confidential, personal, sensitive or public data
+* Identify critical data elements defined by enterprise governance teams
+* Classify the data if it meets compliance (GDPR, HITRUST, HIPAA..) needs
 
-Following are the main features:
+This classification will drive different segments like data quality, governance and analytics.
+
+Manual profiling/classification of the data is very costly and time consuming. InsightLake solution enables the companies to perform the data classification using an intelligent, flexible and robust framework, which uses a variety of data elements, glossaries, metadata coupled with business rules and ML models.
+ 
+Following are the main features of InsightLake solution:
 * Profiles and classifies data using rules and ML models
 * Identifies personal and sensitive data
 * Performs data classification leveraging glossaries, catalog, technical metadata, business tags and actual data
 * Identifies data contexts and correlations to drive better accuracy
 * Classifies critical data elements with enterprise defined governed classes
-* Provides adapters to enrich the existing data catalog
-* Handles structured, unstructured and semi structured data
+* Provides adapters to get the data from catalog or business systems and enrich them with generated classification
+* Handles structured, unstructured and semi structured data (CSV, Excel, Audios, Images, Videos, Text, Docs, PDFs etc.)
 * Works on-premise or cloud environments across different data sources
 * Classifies files, relational databases, Object stores, No-SQL, realtime streams
 
+## Architecture
+InsightLake solution is deployed in a distributed manner with different components. Below diagram shows the high level architecture.
+
+<img style="width:100%;" src="images/profiler.png">
+
+Following are the main components of the solution:
+* Classification Manager (Profiler Engine) - Centrally installed
+* Profiler - Distributed closer to the data
+ 
+### Classification Manager
+Classification manager is a central core engine, which provides following functionality:
+
+UI - Interactive web console
+Core Engine - central engine for coordination
+ML Solution - Pipelines, Notebooks, Labeling Environment, Model repo and catalog
+Classification - Exploration of classification and correction
+APIs - Enable external applications to retrieve classifications, profiles, workflows etc.
+Big Data stores - storing audits, classifications and other data artifacts
+
+### Profiler
+Below diagram shows the high level architecture of the profiler. Multiple instances of profilers can be deployed on-premise or cloud environments and they connect to the centralized classification manager.
+
 <img style="width:100%;" src="images/proofiler.png">
 
-## Technical data types
+Profiler does the following:
+* Loads assigned data profiles, workflows, policies and rules from the Classification manager
+* Initiates the data and technical metadata collection from source systems using various data connectors
+* Connects to the data catalog and glossaries systems or relies on Classification manager to provide them
+* In case of unstructured and semi-structured data performs pre-processing of the data. For example converting scanned documents to text using OCR, converts audio to text, applies NLP models to text and documents, runs entity/keyword models to gather entities from images and videos etc. This metadata is then used in the later stages of profiling/classification.
+* Performs data profiling to get the statistical distribution of the data and categorization of the data types
+* Builds a Data graph to hold rich information about data, metadata, lineage etc.
+* In case of structured data performs high level contextual analysis using rules and models
+* Performs field level analysis using fuzzy matching rules and ML models
+* Performs data correlation analysis using clustering models
+* Gathers or performs lineage analysis
+* Performs holistic classification determination using tiered layers and models to provide confidence levels for a set of predictions.
+* Runs classification workflows periodically or on demand basis
+* Captures profiling/classification change history
+* Capture operational and data audits
+ 
+### UI
+Interactive web console allows easy exploration of generated profiles/classifications, audits etc and management of policies, workflows and rules. Following are some of the screenshots.
 
-* Null or unsupported values
-* Mean, average, min, max
-* Sample values
-* Logical context types like currency, OS, geo information etc.
-* Sensitive data discovery like SSN, Credit card, phone number, email etc.
-* Results from profiling rules
-* Relationships
-* Dashboard showing data element distributions, trends in automated profiling etc.
+* Allows exploration/search of the generated classifications
+* Allows correction of the classification, which could be reused to train models
+* Administration of rules, profiles and workflows
+* Allows exploration of audits
 
-## Metadata Store
-InsightLake Metadata Store enables companies to obtain metadata from various data sources like databases, files, real time streams etc and store them for easy exploration and integration with other applications.Metadata Store defines metadata layer on various data entities.
+#### Data Location
+Central place to set up different data locations for sources like Oracle, MySQL, FTP, Big Query, S3, Redshift, Kafka, MongoDB, DB2 etc..
 
 <img style="width:100%;" src="images/data-location.png">
 
+#### Data Store
+Represents data stores present at the location like tables, files etc.
+
 <img style="width:100%;" src="images/data-store.png">
 
-* System - represents data sources like databases, file systems etc.
-* Data Location - represents database, file systems, Kafka broker, SOLR hosts etc.
-* Data Store - represents table, Kafka topic, file etc.
-* Data Field - represents column, data element, field etc.
-* Application - represents data application
-* Domain - represents data's business domain'
-* User - represents data user.
-* Metadata Store captures technical, operational and business domain metadata and stores them at central location for easy exploration.
-
-## Data Profiling
+#### Data Profiler
+Presents the profiled data and its statistical variations
 
 <img style="width:100%;" src="images/data-tab.png">
+
+#### Rules
+Central place to define rules for a give profile
 
 <img style="width:100%;" src="images/profile-rules-tab.png">
 
@@ -55,18 +94,18 @@ InsightLake Metadata Store enables companies to obtain metadata from various dat
 
 <img style="width:100%;" src="images/data-profiler-tab.png">
 
-Table schema, File type, format, AVRO JSON schema, tags are some of the technical information elements about data assets which Metadata Store captures and stores. Data profiling feature allows extraction of known technical metadata like data field type, size, min and max values, sample values etc. It also extracts derived information like geo, currency, business domain types etc. All types of metadata gets stored in Lucene based central store to allow fast exploration and REST based integration with other enterprise applications.
-
-## Profiles
+#### Data Profile
+Context to store rules
 
 <img style="width:100%;" src="images/profiles.png">
 
-## Logical Types
-Solution already captures different logical types, which can be easily customized and new types can be created.
+#### Logical Types
+Set of logical types for data fields, these types drive pre-existing matching rules. Custom types can easily be created as well.
+
 <img style="width:100%;" src="images/logical-types.png">
 
 ## Dashboard
-Proofiling & Classification dashboard provides great insights about the performance of the classification pipelines
+Profiling & Classification dashboard provides great insights about the performance of the classification pipelines
 
 <img style="width:100%;" src="images/dashboard.png">
 
@@ -74,15 +113,6 @@ Proofiling & Classification dashboard provides great insights about the performa
 Profiler tracks the changes to the metadata, generated classifications, scores, tags etc. using various audit events.
 
 <img style="width:100%;" src="images/audit.png">
-
-
-## Tags & Properties
-Any data element can be tagged for example a table or cell can be tagged as secure, which can then be used by security policy manager to automatically secure the access to the table or cell. Ingestion flow can be tokenized with tags, which can flow through end to end data pipeline for better lineage tracking. Other than tagging, properties (name, value) can be defined on data elements. For example on credit card column a property "Masking" with value "last 4" can be defined and used in business rules where ever data gets processed.
-
-## Business Glossary
-Metadata Store enables companies to put business context over technical metadata to provide clear business terms on top of physical data. It also increases the productivity of the enterprise. Generated glossary helps cross functional alignment between various business groups and provides a common business vocabulary across organization.
-
-To learn more, check out [http://www.insightlake.com/data-profiler.html](http://www.insightlake.com/data-profiler.html)
 
 ## Rules
 * Pre-defined rules to identify data elements
@@ -102,12 +132,8 @@ Following models are used for classification
 * Image classifiers 
 * Audio classification & keywords models
 
-## UI
-* Allows exploration/search of the generated classifications
-* Allows correction of the classification, which could be reused to train models
-* Administration of rules, profiles and workflows
-* Allows exploration of audits
 
+To learn more, check out [http://www.insightlake.com/data-profiler.html](http://www.insightlake.com/data-profiler.html)
 
 Installation
 ------
