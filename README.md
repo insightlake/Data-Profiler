@@ -16,6 +16,7 @@ Following are the main features:
 * Works on-premise or cloud environments across different data sources
 * Classifies files, relational databases, Object stores, No-SQL, realtime streams
 
+<img style="width:100%;" src="images/proofiler.png">
 
 ## Technical data types
 
