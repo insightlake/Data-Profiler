@@ -1,5 +1,7 @@
 # InsightLake Data Profiler & Classification
 
+<img style="width:100%;" src="images/profilermain.png">
+
 Companies are storing lots of data and having a clear visibility of this data at the enterprise level makes the business efficient, safe and compliant. 
 
 Team should be able to clearly identify the classification of the data, following are the important categories:
@@ -11,6 +13,8 @@ This classification will drive different segments like data quality, governance 
 
 Manual profiling/classification of the data is very costly and time consuming. InsightLake solution enables the companies to perform the data classification using an intelligent, flexible and robust framework, which uses a variety of data elements, glossaries, metadata coupled with business rules and ML models.
  
+## InsightLake Data Profiler Solution
+
 Following are the main features of InsightLake solution:
 * Profiles and classifies data using rules and ML models
 * Identifies personal and sensitive data
