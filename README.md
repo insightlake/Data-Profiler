@@ -106,6 +106,15 @@ Context to store rules
 #### Logical Types
 Set of logical types for data fields, these types drive pre-existing matching rules. Custom types can easily be created as well.
 
+## Classification Search
+<img style="width:100%;" src="images/search.png">
+
+## Workflow
+<img style="width:100%;" src="images/workflow.png">
+
+## Agents
+<img style="width:100%;" src="images/agents.png">
+
 ## Dashboard
 Profiling & Classification dashboard provides great insights about the performance of the classification pipelines
 
