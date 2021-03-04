@@ -92,11 +92,11 @@ Presents the profiled data and its statistical variations
 #### Rules
 Central place to define rules for a give profile
 
-<img style="width:100%;" src="images/profile-rules-tab.png">
+<img style="width:100%;" src="images/profiler-rules.png">
 
-<img style="width:100%;" src="images/data-profile-tab.png">
+<img style="width:100%;" src="images/data-profiles.png">
 
-<img style="width:100%;" src="images/data-profiler-tab.png">
+<img style="width:100%;" src="images/data-profilers.png">
 
 #### Data Profile
 Context to store rules
@@ -106,14 +106,34 @@ Context to store rules
 #### Logical Types
 Set of logical types for data fields, these types drive pre-existing matching rules. Custom types can easily be created as well.
 
-## Classification Search
-<img style="width:100%;" src="images/search.png">
+<img style="width:100%;" src="images/logical-types.png">
+
+## Classification
+<img style="width:100%;" src="images/classification.png">
+
+## DLP Classification Search
+<img style="width:100%;" src="images/dlp-classification.png">
 
 ## Workflow
-<img style="width:100%;" src="images/workflow.png">
+<img style="width:100%;" src="images/profiler-workflow.png">
 
 ## Agents
-<img style="width:100%;" src="images/agents.png">
+<img style="width:100%;" src="images/agent.png">
+
+## Category
+<img style="width:100%;" src="images/category.png">
+
+## SubCategory
+<img style="width:100%;" src="images/subcategory.png">
+
+## Domains
+<img style="width:100%;" src="images/domains.png">
+
+## Mappings
+<img style="width:100%;" src="images/mappings.png">
+
+## Class
+<img style="width:100%;" src="images/class.png">
 
 ## Dashboard
 Profiling & Classification dashboard provides great insights about the performance of the classification pipelines
